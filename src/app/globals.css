@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* Width of the entire scrollbar */
+  height: 8px; /* Height of the entire scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 * {
   padding: 0%;
   margin: 0%;
@@ -109,4 +131,32 @@
   .contact-pic {
     display: none;
   }
+}
+
+.second-section-about {
+  background-image: url("/aboutsecond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.servicebg {
+  background-image: url("/serviceherobg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+.serviceformbg {
+  background-image: url("/serviceformbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+.service-page-slider {
+  width: 80%;
 }
