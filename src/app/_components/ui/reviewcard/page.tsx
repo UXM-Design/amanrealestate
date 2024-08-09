@@ -82,7 +82,7 @@ const ReviewCard = () => {
         <Slider {...settings} className="Slider">
           {reviews.map((review) => (
             <div key={review.id} className="SliderSli md:w-[340px] w-auto">
-              <div className="bg-yellow-400 h-[400px] rounded-lg flex flex-col justify-center items-center gap-4">
+              <div className="bg-gray-100 h-[400px] rounded-lg flex flex-col justify-center items-center gap-4">
                 <Image
                   src={review.image}
                   className="rounded-full"
@@ -91,7 +91,9 @@ const ReviewCard = () => {
                   height={130}
                 />
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h3 className="text-2xl">{review.name}</h3>
+                  <h3 className="text-2xl text-yellow-400 font-semibold">
+                    {review.name}
+                  </h3>
                   <span className="text-sm uppercase tracking-wider">
                     {review.title}
                   </span>

@@ -14,7 +14,7 @@ const ReviewPage = () => {
       </div>
       <div className=" relative review-section bg-white">
         <div className="content-card flex justify-center items-center">
-          <h1 className="text-[16vw] text-black/[0.2] font-semibold tracking-tight">
+          <h1 className="text-[16vw] text-black/[0.1] font-semibold tracking-tight">
             Testimonial
           </h1>
         </div>

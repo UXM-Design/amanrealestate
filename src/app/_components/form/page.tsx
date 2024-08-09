@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const FormPage = () => {
   const services = [
@@ -72,9 +73,13 @@ const FormPage = () => {
     },
   ];
 
-  const handelClick = () => {
-    alert("From submited");
-  };
+  const router = useRouter();
+
+  // const handelClick = (e) => {
+  //   // alert("From submited");
+  //   e.preventdefault;
+  //   router.push("/estimate");
+  // };
 
   return (
     <>
@@ -84,7 +89,7 @@ const FormPage = () => {
             Generate your project estimator <br /> within 5 Min
           </h1>
         </div>
-        <form action="/detailform" method="post" onSubmit={handelClick}>
+        <form method="post" action={"/estimate"}>
           <div className="flex flex-col gap-3">
             <label htmlFor="name" className="text-gray-500">
               Choose your service
