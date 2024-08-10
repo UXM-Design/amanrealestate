@@ -1,20 +1,20 @@
-import BreadCrums from "@/app/_components/breadcrums/page";
+// import BreadCrums, { BreadcrumbItem } from "@/app/_components/breadcrums/page";
 import ContactPage from "@/app/_components/contact/page";
 import FooterPage from "@/app/_components/footer/page";
 import DetailForm from "@/app/_components/ui/detailform/page";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const breadcrumbs = [
-    { href: "/", label: "Service" },
-    { href: `{services/${params.slug}}`, label: `${params.slug}` },
-    // Add more breadcrumb items as needed
-  ];
+  /*  const breadcrumbs: BreadcrumbItem[] = [
+     { href: "/", label: "Service" },
+     { href: `{services/${params.slug}}`, label: `${params.slug}` },
+     // Add more breadcrumb items as needed
+   ]; */
   return (
     <>
       <section className="w-full min-h-screen flex flex-col justify-center items-center overflow-hidden">
         <div className="w-full h-screen flex justify-evenly items-center overflow-y-scroll">
           <div className="flex justify-center items-start flex-col w-full md:px-14 px-2">
-            <BreadCrums breadcrumbs={breadcrumbs} />
+            {/* <BreadCrums breadcrumbs={breadcrumbs} /> */}
             <br />
             <h1 className="text-2xl uppercase tracking-wider font-bold">
               {params.slug}

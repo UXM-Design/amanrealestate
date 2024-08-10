@@ -1,16 +1,16 @@
-import React from "react";
+/* import React, { FC } from "react";
 import Link from "next/link";
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   href: string;
   label: string;
 }
 
-interface BreadCrumsProps {
+export interface BreadCrumsProps {
   breadcrumbs: BreadcrumbItem[];
 }
 
-const BreadCrums: React.FC<BreadCrumsProps> = ({ breadcrumbs }) => {
+export default function BreadCrums({ breadcrumbs }: BreadCrumsProps) {
   return (
     <nav aria-label="Breadcrumb" className="flex">
       <ol className="flex overflow-hidden rounded-lg border border-gray-200 text-gray-600">
@@ -57,4 +57,4 @@ const BreadCrums: React.FC<BreadCrumsProps> = ({ breadcrumbs }) => {
   );
 };
 
-export default BreadCrums;
+ */
