@@ -1,7 +1,14 @@
 import React from "react";
+import ContactPage from "../_components/contact/page";
+import FooterPage from "../_components/footer/page";
 
-const ContactPage = () => {
-  return <div>page</div>;
+const page = () => {
+  return (
+    <>
+      <ContactPage />
+      <FooterPage />
+    </>
+  );
 };
 
-export default ContactPage;
+export default page;

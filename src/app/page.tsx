@@ -14,7 +14,6 @@ import FooterPage from "./_components/footer/page";
 export default function Home() {
   return (
     <>
-      <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between bg-white">
         <section className="w-full relative hero-section md:h-screen h-auto flex md:justify-start justify-center items-center md:px-24 px-2 md:flex-nowrap flex-wrap">
           <div className="w-full flex flex-col gap-8 justify-start items-center">

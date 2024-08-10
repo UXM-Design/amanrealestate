@@ -6,6 +6,11 @@ import { MdOutlineMenuOpen, MdOutlineClose } from "react-icons/md";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const handelOpen = () => {
     setIsOpen(true);
   };
@@ -14,10 +19,16 @@ const NavBar = () => {
     setIsOpen(false);
   };
 
+  const services = [
+    { id: 1, name: "Service1", path: "service1" },
+    { id: 2, name: "Service2", path: "service2" },
+    { id: 3, name: "Service3", path: "service3" },
+  ];
+
   return (
     <>
       {/* Desktop navigation menu  */}
-      <div className="w-full p-4 flex md:flex-row flex-col md:gap-0 gap-6 md:justify-between justify-center items-center">
+      <div className="relative w-full p-4 flex md:flex-row flex-col md:gap-0 gap-6 md:justify-between justify-center items-center">
         <div className="logo md:block hidden">
           <h1>Logo</h1>
         </div>
@@ -26,13 +37,13 @@ const NavBar = () => {
             <Link href={"/"}>Home</Link>
           </span>
           <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/"}>About</Link>
+            <Link href={"/about"}>About</Link>
           </span>
           <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/"}>Service</Link>
+            <Link href={"/service"}>Service</Link>
           </span>
           <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/"}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </span>
         </div>
         <div className="md:hidden flex w-full justify-between align-middle">
@@ -46,6 +57,17 @@ const NavBar = () => {
             <MdOutlineMenuOpen />
           </div>
         </div>
+        {/* service Menu
+        <div isOpen={isModalOpen} onClose={closeModal} className="absolute top-1/2 right-1/2 w-[400px] bg-white rounded-lg h-[300px] flex justify-center gap-8 items-center">
+          {services.map((service) => (
+            <span
+              key={service.id}
+              className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500"
+            >
+              <Link href={service.path}>{service.name}</Link>
+            </span>
+          ))}
+        </div> */}
         {isOpen && (
           <>
             <div className="nav-mobile md:hidden w-full flex gap-3 flex-col h-screen overflow-y-hidden">

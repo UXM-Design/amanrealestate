@@ -61,7 +61,7 @@ const ServiceCard = () => {
   return (
     <>
       <div className="md:w-[800px] w-auto h-auto flex justify-center items-center md:py-0 py-8">
-        <Slider {...settings} className="Slider">
+        <Slider {...settings} className="service-page-slider">
           {services.map((service) => (
             <div key={service.id} className="SliderSli">
               <div className="flex drop-shadow-sm hover:scale-105 transition-all cursor-pointer rounded-md justify-center gap-6 items-center flex-col w-[100%] md:h-[420px] h-[330px] bg-white">

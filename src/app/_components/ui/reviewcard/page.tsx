@@ -13,6 +13,32 @@ const ReviewCard = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const reviews = [
@@ -52,11 +78,11 @@ const ReviewCard = () => {
 
   return (
     <>
-      <div className="md:w-[800px] w-[600px] h-auto flex justify-center items-center">
+      <div className="md:w-[800px] w-[300px] h-auto flex justify-center items-center">
         <Slider {...settings} className="Slider">
           {reviews.map((review) => (
             <div key={review.id} className="SliderSli md:w-[340px] w-auto">
-              <div className="bg-yellow-400 h-[400px] rounded-lg flex flex-col justify-center items-center gap-4">
+              <div className="bg-gray-100 h-[400px] rounded-lg flex flex-col justify-center items-center gap-4">
                 <Image
                   src={review.image}
                   className="rounded-full"
@@ -65,7 +91,9 @@ const ReviewCard = () => {
                   height={130}
                 />
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h3 className="text-2xl">{review.name}</h3>
+                  <h3 className="text-2xl text-yellow-400 font-semibold">
+                    {review.name}
+                  </h3>
                   <span className="text-sm uppercase tracking-wider">
                     {review.title}
                   </span>
