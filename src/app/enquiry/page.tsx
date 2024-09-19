@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, MouseEventHandler, useState } from "react";
 
 function MultiStepForm() {
   const [step, setStep] = useState(1);
@@ -25,7 +25,7 @@ function MultiStepForm() {
   const [refId, setRefId] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -43,7 +43,7 @@ function MultiStepForm() {
     return "REF-" + Math.random().toString(36).substr(2, 9).toUpperCase();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Generate a reference ID and show the popup
     setRefId(generateRefId());

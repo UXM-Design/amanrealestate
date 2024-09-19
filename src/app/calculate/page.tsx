@@ -24,7 +24,7 @@ interface IMaterialCalculate {
   materials: IMaterial[]
 }
 
-const page = () => {
+const Page = () => {
   const services = [
     {
       id: 1,
@@ -379,4 +379,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
