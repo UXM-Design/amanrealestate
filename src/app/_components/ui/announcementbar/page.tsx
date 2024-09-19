@@ -23,20 +23,16 @@ const AnnouncementBar = () => {
       id: 5,
       title: "Equipment Takeoff",
     },
-    // {
-    //   id: 6,
-    //   title: "Exterior Improvement Takeoff",
-    // },
   ];
 
   return (
     <>
-      <div className="w-full text-[#d2d2d2] bg-[#353535] overflow-x-hidden py-3 text-sm px-2 uppercase tracking-wider">
+      <div className="w-full text-[#202020] bg-yellow-500 overflow-x-hidden py-3 text-sm px-2 uppercase tracking-wider">
         <div className=" announcement-scroll-container flex justify-center items-center gap-8 ">
           {items.map((item) => (
             <div
               key={item.id}
-              className="scroll-wrapper text-sm hover:animate-pulse hover:text-white"
+              className="scroll-wrapper text-[12px] tracking-wider hover:animate-pulse hover:text-white"
             >
               <Link href="" className="scrollLink">
                 {item.title}

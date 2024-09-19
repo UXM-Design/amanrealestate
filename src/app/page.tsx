@@ -1,165 +1,128 @@
-import Image from "next/image";
-import NavBar from "./_components/ui/navbar/page";
-import FormPage from "./_components/form/page";
-import ClientSlider from "./_components/ui/clientSlider/page";
-import BlogCardSlider from "./_components/ui/blog/blogcardSlider/page";
-import Link from "next/link";
-import { GiPolarStar } from "react-icons/gi";
-import ServiceCard from "./_components/ui/servicecard/page";
+import HeroSection from "./_components/ui/heroSection";
 import ReviewPage from "./_components/ui/review/page";
-import ContactForm from "./_components/ui/contactForm/page";
-import ContactPage from "@/app/_components/contact/page";
+import Link from "next/link";
+import Image from "next/image";
+import ContactPage from "./_components/contact/page";
 import FooterPage from "./_components/footer/page";
+import SliderPage from "./_components/slider/page";
 
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between bg-white">
-        <section className="w-full relative hero-section md:h-screen h-auto flex md:justify-start justify-center items-center md:px-24 px-2 md:flex-nowrap flex-wrap">
-          <div className="w-full flex flex-col gap-8 justify-start items-center">
-            <div className="contentBox text-white flex flex-col gap-3 md:py-0 py-6">
-              <span className="p-4 rounded-md w-48 bg-green-300 text-sm text-green-800">
-                Super Fast Estimating
-              </span>
-              <h3 className="text-lg">Get your estimation in</h3>
-              <h1 className="text-4xl font-semibold">5 min</h1>
-              <p className="md:w-[60%] w-auto text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                officia, culpa perferendis iste aspernatur libero fugit eum
-                itaque maiores asperiores saepe repellat, modi eius architecto.
-                Eum repellendus ducimus facere iure temporibus doloribus.
-              </p>
-            </div>
-            <BlogCardSlider />
-          </div>
-
-          <FormPage />
-        </section>
-        <ClientSlider />
-        {/* about us  */}
-        <section className="homeAbout w-full md:h-[80vh] min-h-screen flex justify-around items-center md:flex-nowrap flex-wrap md:px-14 px-2">
-          <div className="w-full flex justify-center items-center">
-            <Image
-              src="/construction_one.png"
+      <div className="w-full h-full overflow-x-hidden">
+        <HeroSection />
+        <div className="w-full py-4 h-screen bg-white text-black flex justify-center items-center flex-col">
+          <SliderPage />
+        </div>
+        <div className="w-full flex md:justify-evenly justify-center md:flex-row flex-col items-center md:h-auto md:py-6 py-4 h-auto">
+          <div className=" md:w-[350px] md:height-[450px] w-[350px] h-[450px] overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover transition-all duration-300 ease-in hover:scale-110"
+              src="https://img.freepik.com/free-photo/high-angle-woman-working-as-engineer_23-2150290086.jpg?t=st=1726714308~exp=1726717908~hmac=ef1eacb3cfc13c5c2bb3c9a25987418d506d51cee1746d27390dd369112a0b26&w=360"
               width={300}
-              height={140}
-              alt="About Image"
-              className="drop-shadow hover:drop-shadow-2xl sm:h-[80] md:py-0 py-6 md:hover:border-[22px] md:hover:border-none hover:border-yellow-400 hover:transition-all"
+              height={450}
+              alt="contractor image"
             />
           </div>
-          <div className="w-full flex flex-col gap-8 md:py-0 py-6">
-            <div className="w-full px-2 flex flex-col gap-3">
-              <h1 className="text-4xl font-semibold">About us</h1>
-              <p className="w-[90%]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati illum facere soluta asperiores ad dicta atque eveniet
-                quam fuga laudantium aperiam sunt rerum iusto, officiis quidem
-                accusamus laborum est facilis.
+          <div className="flex flex-col gap-6 md:w-1/2 w-full md:px-0 px-4 md:py-0 py-4">
+            <h2 className="text-2xl font-bold ">
+              Explore the best solutions for your business.
+            </h2>
+            <p className="m-0">
+              Whether your team needs fast and accurate takeoff tools to
+              complete more bids or easy-to-use field collaboration and project
+              management tools to finish on time and budget, We has you covered.
+            </p>
+            <Link
+              href="/enquiry"
+              className="px-4 py-3 bg-yellow-400 font-bold text-sm text-black text-center rounded-md w-[180px]"
+            >
+              Get Started
+            </Link>
+            <div className="flex flex-col gap-0">
+              <details className="px-4 py-4 border-b-2 border-[#d8d8d8]">
+                <summary className="font-semibold">Sub Contractor</summary>
+                <p>
+                  Win more profitable work with fast, accurate takeoffs &
+                  estimates, and build smarter with best-in-class field tools.
+                </p>
+              </details>
+              <details className="px-4 py-4 border-b-2 border-[#d8d8d8]">
+                <summary className="font-semibold">General Contractor</summary>
+                <p>
+                  Easily ballpark takeoffs for all trades and centralize
+                  documents, records & plans among all your subs & stakeholders.
+                </p>
+              </details>
+              <details className="px-4 py-4 border-b-2 border-[#d8d8d8]">
+                <summary className="font-semibold">
+                  Supplier/Distributor
+                </summary>
+                <p>
+                  Offer accurate, complimentary takeoffs for contractors using
+                  your pricing catalogs for value-added service.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div className="w-full md:h-screen h-auto bg-slate-100 text-black flex flex-col justify-center items-center md:py-0 py-6 md:px-4 px-4">
+          <div className="md:py-6 py-3">
+            <h1 className="text-4xl text-align text-wrap">
+              Learn how we can meet your construction tech needs.
+            </h1>
+          </div>
+          <div className="w-full flex md:justify-evenly justify-center md:flex-row flex-col items-center">
+            <div className="w-auto flex flex-col gap-4 p-6">
+              <Image src={"/tools.png"} width="200" height="200" alt="Tools" />
+              <h3 className="text-2xl font-semibold text-yellow-500">
+                Takeoff & Estimating
+              </h3>
+              <p className="md:w-auto text-wrap whitespace-normal w-full md:pr-4 pr-0">
+                Comprehensive takeoff & estimating solution empowering you to
+                win more work by bidding more in less time.
               </p>
-              <Link
-                href={"/"}
-                className="px-6 w-[140px] py-3 rounded-md bg-yellow-400 hover:bg-yellow-300 text-black md:mt-4 mt-0"
-              >
-                Learn More
-              </Link>
             </div>
-            <div className="flex w-full justify-evenly items-center py-4 border-t-2 bortder-[#878787]">
-              <div className="flex flex-col justify-start gap-3 px-4 py-4 items-center">
-                <GiPolarStar className="text-black text-lg" />
-                <h1>Better & Faster</h1>
-              </div>
-              <div className="flex flex-col justify-start gap-3 px-4 py-4 items-center">
-                <GiPolarStar className="text-black text-lg" />
-                <h1>Win better project</h1>
-              </div>
-              <div className="flex flex-col justify-start gap-3 px-4 py-4 items-center">
-                <GiPolarStar className="text-black text-lg" />
-                <h4>Get effectent costing</h4>
-              </div>
+            <div className="w-auto flex flex-col gap-4 p-6">
+              <Image
+                src={"/project.png"}
+                width="200"
+                height="200"
+                alt="Tools"
+              />
+              <h3 className="text-2xl font-semibold text-yellow-500">
+                Field & Project Management
+              </h3>
+              <p className="md:w-auto text-wrap whitespace-normal w-full md:pr-4 pr-0">
+                Construction management app connecting crews to each other & the
+                back office with lightning-fast responsiveness.
+              </p>
             </div>
-          </div>
-        </section>
-        {/* why choose us */}
-        <section className="w-full min-h-screen flex md:justify-between justify-center items-center md:flex-nowrap flex-wrap">
-          <div className="choosebg w-full min-h-screen flex justify-center items-center flex-col">
-            <div className="w-full h-screen flex flex-col gap-2 justify-center items-start md:px-14 px-4 text-white  bg-black/60">
-              <h1 className="text-4xl font-bold">Quicker Estimating</h1>
-              <h1 className="text-4xl font-bold">Win More</h1>
-              <h1 className="text-4xl font-bold">Build Better</h1>
-            </div>
-          </div>
-          <div className="w-full min-h-screen flex justify-center items-center flex-col text-white bg-black">
-            <div className="w-[80%] flex flex-col justify-center items-start gap-3">
-              <h1 className="text-4xl py-4">Why Choose Us</h1>
-              <br />
-              <div className="flex gap-6">
-                <div className="flex flex-col gap-3">
-                  <GiPolarStar className="text-lg" />
-                </div>
-                <div className="flex flex-col gap-31">
-                  <h2 className="text-2xl">Point One</h2>
-                  <p className="text-sm text-gray-500 hover:text-white py-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis quisquam asperiores fuga ratione reprehenderit
-                    maxime tempore nostrum aspernatur officiis rerum.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="flex flex-col gap-3">
-                  <GiPolarStar className="text-lg" />
-                </div>
-                <div className="flex flex-col gap-31">
-                  <h2 className="text-2xl">Point Two</h2>
-                  <p className="text-sm text-gray-500 hover:text-white py-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis quisquam asperiores fuga ratione reprehenderit
-                    maxime tempore nostrum aspernatur officiis rerum.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="flex flex-col gap-3">
-                  <GiPolarStar className="text-lg" />
-                </div>
-                <div className="flex flex-col gap-31">
-                  <h2 className="text-2xl">Point Three</h2>
-                  <p className="text-sm text-gray-500 hover:text-white py-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis quisquam asperiores fuga ratione reprehenderit
-                    maxime tempore nostrum aspernatur officiis rerum.
-                  </p>
-                </div>
-              </div>
+            <div className="w-auto flex flex-col gap-4 p-6">
+              <Image
+                src={"/construction.png"}
+                width="200"
+                height="200"
+                alt="Tools"
+              />
+              <h3 className="text-2xl font-semibold text-yellow-500">
+                Property & Facility Operations
+              </h3>
+              <p className="md:w-auto text-wrap whitespace-normal w-full md:pr-4 pr-0">
+                Centralized hub for easy plan access & document management,
+                enabling smoother maintenance workflows.
+              </p>
             </div>
           </div>
-        </section>
-        {/* our services  */}
-        <section className="ourservice w-full md:h-[80vh] h-auto flex md:flex-nowrap flex-wrap md:justify-evenly justify-center items-center">
-          <div className="w-full flex justify-center items-center md:h-auto h-[40vh]">
-            <div className="container flex flex-col gap-3 w-[60%]">
-              <span className="md:px-6 px-3 md:py-3 py-2 bg-green-300 text-green-900 w-[180px] text-center rounded-full ">
-                our service
-              </span>
-              <h2 className="md:text-4xl text-3xl">
-                How we provide value <br />
-                for our client
-              </h2>
-            </div>
-          </div>
-          {/* <div className="w-full">
-            <ServiceCard />
-          </div> */}
-          <div className="w-full h-auto">
-            <ServiceCard />
-          </div>
-        </section>
-        <section className="w-full md:h-screen h-auto md:block hidden">
+        </div>
+
+        {/* <ReviewPage /> */}
+        <section className="w-full md:h-screen h-auto md:block">
           <ReviewPage />
         </section>
         <ContactPage />
         <FooterPage />
-      </main>
+      </div>
     </>
   );
 }

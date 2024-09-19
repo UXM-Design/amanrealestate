@@ -1,102 +1,223 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import { MdOutlineMenuOpen, MdOutlineClose } from "react-icons/md";
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react";
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/react";
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const products = [
+  {
+    name: "Electrical Takeoff",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Engagement",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Security",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Integrations",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Automations",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
+const callsToAction = [
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  const handelOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handelClose = () => {
-    setIsOpen(false);
-  };
-
-  const services = [
-    { id: 1, name: "Service1", path: "service1" },
-    { id: 2, name: "Service2", path: "service2" },
-    { id: 3, name: "Service3", path: "service3" },
-  ];
+export default function NavBar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      {/* Desktop navigation menu  */}
-      <div className="relative w-full p-4 flex md:flex-row flex-col md:gap-0 gap-6 md:justify-between justify-center items-center">
-        <div className="logo md:block hidden">
-          <h1>Logo</h1>
+    <header className="bg-white">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
+        <div className="flex lg:flex-1">
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <h3>Logo</h3>
+          </a>
         </div>
-        <div className="nav-desk md:flex hidden gap-6">
-          <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/"}>Home</Link>
-          </span>
-          <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/about"}>About</Link>
-          </span>
-          <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/service"}>Service</Link>
-          </span>
-          <span className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500">
-            <Link href={"/contact"}>Contact</Link>
-          </span>
-        </div>
-        <div className="md:hidden flex w-full justify-between align-middle">
-          <div className="logo ">
-            <h1>Logo</h1>
-          </div>
-          <div
-            onClick={handelOpen}
-            className="md:hidden block text-2xl cursor-pointer"
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
-            <MdOutlineMenuOpen />
-          </div>
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+          </button>
         </div>
-        {/* service Menu
-        <div isOpen={isModalOpen} onClose={closeModal} className="absolute top-1/2 right-1/2 w-[400px] bg-white rounded-lg h-[300px] flex justify-center gap-8 items-center">
-          {services.map((service) => (
-            <span
-              key={service.id}
-              className="text-sm uppercase tracking-wider font-medium text-gray-500 hover:text-yellow-500"
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          {/* <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+              Services
+             
+            </PopoverButton>
+
+          </Popover> */}
+
+          <a
+            href="/service"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Services
+          </a>
+          <a
+            href="/about"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            About us
+          </a>
+          <a
+            href="/blog"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            News & Updates
+          </a>
+          <a
+            href="/contact"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Contact us
+          </a>
+        </PopoverGroup>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="/enquiry"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Enquiry <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </nav>
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                alt=""
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-8 w-auto"
+              />
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
-              <Link href={service.path}>{service.name}</Link>
-            </span>
-          ))}
-        </div> */}
-        {isOpen && (
-          <>
-            <div className="nav-mobile md:hidden w-full flex gap-3 flex-col h-screen overflow-y-hidden">
-              <div className="link flex flex-col w-full justify-center h-[60vh] items-center gap-14">
-                <div
-                  onClick={handelClose}
-                  className="block text-2xl cursor-pointer"
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                {/* <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    Product
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2">
+                    {[...products, ...callsToAction].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure> */}
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  <MdOutlineClose />
-                </div>
-                <span>
-                  <Link href={"/"}>Home</Link>
-                </span>
-                <span>
-                  <Link href={"/"}>About</Link>
-                </span>
-                <span>
-                  <Link href={"/"}>Service</Link>
-                </span>
-                <span>
-                  <Link href={"/"}>Contact</Link>
-                </span>
+                  Services
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  About
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  News & updates
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Contact
+                </a>
+              </div>
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Enquiry
+                </a>
               </div>
             </div>
-          </>
-        )}
-      </div>
-    </>
+          </div>
+        </DialogPanel>
+      </Dialog>
+    </header>
   );
-};
-
-export default NavBar;
+}
