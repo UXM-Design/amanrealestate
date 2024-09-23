@@ -15,8 +15,8 @@ export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white z-[-10]">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="z-[-10] hero-content">
+      <div className="relative isolate px-6 pt-14 lg:px-8 flex justify-center items-center">
         {/* <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -29,9 +29,9 @@ export default function HeroSection() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div> */}
-        <div className="mx-auto max-w-2xl py-10 sm:py-10 lg:py-10">
+        <div className="mx-auto flex-col max-w-2xl py-10 sm:py-10 lg:py-10 absolute top-0 left-0 translate-[-50%, -50%] w-full md:h-screen h-auto flex justify-center items-center bg-black/60">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-gray-200/10 hover:ring-gray-900/20">
               Get 20% OFF on your first purchase.{" "}
               <a href="/contact" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -39,11 +39,11 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <div className="text-left px-8">
+            <h1 className="md:text-2xl text-3xl font-bold tracking-tight text-white">
               Win more projects with right estimation
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-200">
               From project evaluation, takeoff and estimating, to construction
               and closeout, contractors use STACK’s cloud-based software to help
               run their businesses and maximize profits.
@@ -57,7 +57,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-white"
               >
                 Learn more <span aria-hidden="true">→</span>
               </a>

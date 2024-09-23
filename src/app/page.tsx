@@ -9,9 +9,9 @@ import SliderPage from "./_components/slider/page";
 export default function Home() {
   return (
     <>
-      <div className="w-full h-full overflow-x-hidden">
+      <div className="w-full md:h-full h-auto overflow-x-hidden">
         <HeroSection />
-        <div className="w-full py-4 h-screen bg-white text-black flex justify-center items-center flex-col">
+        <div className="w-full py-4 md:h-screen h-auto bg-white text-black flex justify-center items-center flex-col">
           <SliderPage />
         </div>
         <div className="w-full flex md:justify-evenly justify-center md:flex-row flex-col items-center md:h-auto md:py-6 py-4 h-auto">

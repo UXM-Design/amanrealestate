@@ -10,7 +10,7 @@ const page = () => {
     <>
       <main className="w-full min-h-screen flex flex-col gap-3 justify-center items-center">
         <div className="flex h-screen flex-col gap-3 justify-center align-middle text-center">
-          <h1 className="text-[20vh] font-semibold selection:text-yellow-500 leading-tight">
+          <h1 className="text-[12vh] font-semibold selection:text-yellow-500 leading-tight">
             About us
           </h1>
           <span className="text-sm text-gray-700 uppercase tracking-wider">

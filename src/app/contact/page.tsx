@@ -28,7 +28,8 @@ export default function ContactPage() {
           Contact sales
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          We are happy to assist you with your queries. Our team will be working
+          mon - fri from 10:30 AM to 8:30PM
         </p>
       </div>
       <form

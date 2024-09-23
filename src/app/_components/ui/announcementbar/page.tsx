@@ -2,44 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 const AnnouncementBar = () => {
-  const items = [
-    {
-      id: 1,
-      title: "Electrical Takeoff",
-    },
-    {
-      id: 2,
-      title: "Mechanical Takeoff",
-    },
-    {
-      id: 3,
-      title: "Plumbing Takeoff",
-    },
-    {
-      id: 4,
-      title: "Furnishing Takeoff",
-    },
-    {
-      id: 5,
-      title: "Equipment Takeoff",
-    },
-  ];
-
   return (
     <>
-      <div className="w-full text-[#202020] bg-yellow-500 overflow-x-hidden py-3 text-sm px-2 uppercase tracking-wider">
-        <div className=" announcement-scroll-container flex justify-center items-center gap-8 ">
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className="scroll-wrapper text-[12px] tracking-wider hover:animate-pulse hover:text-white"
-            >
-              <Link href="" className="scrollLink">
-                {item.title}
-              </Link>
-            </div>
-          ))}
-        </div>
+      <div className="w-full text-white bg-black  py-3 text-sm px-2 uppercase flex justify-center items-center tracking-wider">
+        <span className="text-center">30% OFF on first order</span>
       </div>
     </>
   );
