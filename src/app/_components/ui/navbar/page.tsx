@@ -111,10 +111,10 @@ export default function NavBar() {
             About us
           </a>
           <a
-            href="/blog"
+            href="/work"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            News & Updates
+            Our Work
           </a>
           <a
             href="/contact"

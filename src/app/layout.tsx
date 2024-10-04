@@ -11,8 +11,8 @@ const adventure = Advent_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Realestate webpage",
-  description: "realestate website",
+  title: "Realestate Webpage",
+  description: "Realestate Website",
 };
 
 export default function RootLayout({
