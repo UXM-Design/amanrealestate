@@ -11,7 +11,7 @@ const adventure = Advent_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Realestate Webpage",
+  title: "ArchoInfra Website",
   description: "Realestate Website",
 };
 

@@ -27,6 +27,11 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 
+import { Dancing_Script } from 'next/font/google';
+const dancingScript = Dancing_Script({ weight: ['400', '700'], subsets: ['latin'] });
+
+
+
 const products = [
   {
     name: "Electrical Takeoff",
@@ -76,7 +81,7 @@ export default function NavBar() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <h3>Logo</h3>
+            <h3 className={`text-3xl ${dancingScript.className}`} >ArchoInfra</h3>
           </a>
         </div>
         <div className="flex lg:hidden">

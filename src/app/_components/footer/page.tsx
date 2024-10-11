@@ -2,6 +2,11 @@ import React from "react";
 import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 
+import { Dancing_Script } from 'next/font/google';
+const dancingScript = Dancing_Script({ weight: ['400', '700'], subsets: ['latin'] });
+
+
+
 const FooterPage = () => {
   return (
     <>
@@ -10,6 +15,7 @@ const FooterPage = () => {
         <div className="w-full flex md:flex-row flex-col gap-14 justify-evenly items-center md:py-0 py-6">
           <div className="flex flex-col md:py-0 py-8">
             <div className="flex flex-col gap-2">
+              <h3 className={`text-3xl ${dancingScript.className}`} >ArchoInfra</h3>
               <h1 className="text-2xl">Get In Touch</h1>
               <p>+91 900 900 9000</p>
               <p>info@company.com</p>
