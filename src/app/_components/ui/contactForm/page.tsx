@@ -19,7 +19,7 @@ const ContactForm = () => {
                 name="firstname"
                 placeholder="Enter first name"
                 autoFocus={false}
-                className="py-3 px-3 md:w-[300px] w-full border-b-2 focus:border-b-2"
+                className="py-3 px-3 md:w-[300px] w-full  border border-gray-300 rounded-md focus:border-b-2"
               />
             </div>
             <div className="flex flex-col gap-3">
@@ -31,7 +31,7 @@ const ContactForm = () => {
                 name="lastname"
                 placeholder="Enter last name"
                 autoFocus={false}
-                className="py-3 px-3 md:w-[300px] w-full border-b-2 focus:border-b-2"
+                className="py-3 px-3 md:w-[300px] w-full  border border-gray-300 rounded-md focus:border-b-2"
               />
             </div>
           </div>
@@ -45,7 +45,7 @@ const ContactForm = () => {
               name="email"
               placeholder="Enter email"
               autoFocus={false}
-              className="py-3 px-3 w-full border-b-2 focus:border-b-2"
+              className="py-3 px-3 w-full  border border-gray-300 rounded-md focus:border-b-2"
             />
           </div>
           <br />
@@ -54,7 +54,7 @@ const ContactForm = () => {
               Message
             </label>
             <textarea
-              className="py-3 px-3 w-full border-b-2 focus:border-b-2"
+              className="py-3 px-3 w-full  border border-gray-300 rounded-md focus:border-b-2"
               name="message"
               id="message"
               placeholder="Enter your message"
@@ -65,7 +65,7 @@ const ContactForm = () => {
             <input
               type="submit"
               value="Submit"
-              className="text-sm py-3 px-4 w-[160px] text-black bg-yellow-400 cursor-pointer"
+              className="text-sm py-3 px-4 w-[160px] text-black rounded-md bg-yellow-400 cursor-pointer"
             />
           </div>
         </form>

@@ -5,13 +5,24 @@ import Image from "next/image";
 import ContactPage from "./_components/contact/page";
 import FooterPage from "./_components/footer/page";
 import SliderPage from "./_components/slider/page";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Home() {
   return (
     <>
       <div className="w-full md:h-full h-auto overflow-x-hidden">
         <HeroSection />
-        <div className="w-full py-4 md:h-screen h-auto bg-white text-black flex justify-center items-center flex-col">
+        <div className="w-full h-auto md:py-8 py-4 bg-white text-black flex justify-center items-center flex-col">
+          <div className="flex justify-between items-center py-4 md:w-[80vw] w-auto md:px-0 px-4  ">
+            <h2 className="text-4xl font-semibold py-4">Our Services</h2>
+            <Link
+              href={"/contact"}
+              className="md:flex hidden gap-4 justify-center items-center hover:border-b-2 hover:border-yellow-500 hover:border-spacing-4 ease-in duration-200"
+            >
+              <p>Schedule A Call</p>
+              <IoIosArrowRoundForward />
+            </Link>
+          </div>
           <SliderPage />
         </div>
         <div className="w-full md:h-screen h-auto bg-slate-100 text-black flex flex-col justify-center items-center md:py-0 py-6 md:px-4 px-4">
@@ -116,9 +127,8 @@ export default function Home() {
           </div>
         </div>
 
-
         {/* <ReviewPage /> */}
-        <section className="w-full md:h-screen h-auto md:block">
+        <section className="w-full md:h-auto h-auto md:block">
           <ReviewPage />
         </section>
         <ContactPage />

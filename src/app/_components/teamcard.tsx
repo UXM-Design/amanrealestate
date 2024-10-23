@@ -9,11 +9,11 @@ const TeamCard = () => {
 
   return (
     <>
-      <div className="flex space-x-14">
+      <div className="flex md:flex-row flex-col justify-center items-center md:py-0 py-12 gap-6 md:space-x-14 space-x-0 md:min-h-screen h-auto">
         {teams.map((team) => (
           <div
             key={team.id}
-            className="w-[280px] h-[320px] flex flex-col gap-3 justify-center items-center rounded-sm hover:drop-shadow-md hover:scale-110"
+            className="w-[280px] h-[320px] flex flex-col md:gap-3 gap-12 justify-center items-center rounded-sm hover:drop-shadow-md md:hover:scale-110 hover:scale-100"
           >
             <div className="p-4 flex flex-col gap-2">
               <div className="w-[260px] h-[260px] bg-yellow-200 rounded-md flex justify-center items-center">

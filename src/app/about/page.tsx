@@ -8,12 +8,12 @@ import FooterPage from "../_components/footer/page";
 const page = () => {
   return (
     <>
-      <main className="w-full min-h-screen flex flex-col gap-3 justify-center items-center">
+      <main className="w-full min-h-screen flex flex-col gap-3 justify-center items-center overflow-hidden">
         <div className="flex h-screen flex-col gap-3 justify-center align-middle text-center">
           <h1 className="text-[12vh] font-semibold selection:text-yellow-500 leading-tight">
             About us
           </h1>
-          <span className="text-sm text-gray-700 uppercase tracking-wider">
+          <span className="text-sm text-center text-gray-700 uppercase tracking-wider">
             Build better with our perfect estimation
           </span>
           <br />
@@ -22,14 +22,14 @@ const page = () => {
           </span>
         </div>
         <div className="second-section-about w-full min-h-screen flex flex-col gap-3 justify-center items-center">
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-auto md:px-0 px-6">
             <h2 className="text-[3.4rem] text-wrap leading-tight selection:text-white">
               We’re commited to fostering and estimating better quotes that fits
               everyone
             </h2>
           </div>
         </div>
-        <div className="w-full min-h-screen flex md:flex-row flex-col gap-3 md:justify-between justify-center items-center">
+        <div className="w-full md:min-h-screen h-auto md:py-0 py-12 md:px-0 px-4 flex md:flex-row flex-col gap-8 md:justify-between justify-center items-center">
           <div
             className="w-full flex justify-center items-center
             "
@@ -57,21 +57,21 @@ const page = () => {
             </div>
           </div>
           <div
-            className="w-full h-screen bg-black text-yellow-500  flex justify-center items-center
+            className="w-full md:h-screen h-[30vh] bg-black text-yellow-500  flex justify-center items-center
             "
           >
-            <h1 className="text-[2.5vw] selection:text-white selection:border-b-2 border-gray-800">
+            <h1 className="md:text-[2.5vw] text-3xl  selection:text-white selection:border-b-2 border-gray-800">
               Providing value for <br /> better{" "}
               <span className="text-white">wining</span>
             </h1>
           </div>
         </div>
-        <div className="w-full min-h-screen flex md:flex-row flex-col gap-3 md:justify-between justify-center items-center">
+        <div className="w-full md:min-h-screen h-auto md:py-0 py-12 md:px-0 px-4 flex md:flex-row flex-col gap-8 md:justify-between justify-center items-center">
           <div
-            className="w-full h-screen bg-slate-100 text-yellow-500  flex justify-center items-center
+            className="w-full md:h-screen h-[30vh] bg-slate-100 text-black  flex justify-center items-center
             "
           >
-            <h1 className="text-[2.5vw] selection:text-black selection:border-b-2 border-gray-800">
+            <h1 className="md:text-[2.5vw] text-3xl selection:text-black selection:border-b-2 border-gray-800">
               To provide scalable
               <br /> and{" "}
               <span className="text-black font-serif">profitable quotaion</span>
@@ -104,12 +104,12 @@ const page = () => {
             </div>
           </div>
         </div>
-        <section className="w-full h-screen flex flex-col justify-center items-center">
+        <section className="w-full md:h-screen h-auto md:py-0 py-12 flex flex-col justify-center items-center">
           <h1 className="md:py-6 py-3 text-4xl font-semibold">
             Our Team Members
           </h1>
           <br />
-          <div className="">
+          <div className="h-auto flex md:flex-col flex-row justify-center items-center ">
             <TeamCard />
           </div>
         </section>
