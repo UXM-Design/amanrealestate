@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { url } from "inspector";
-import imageone from "/machinework.avif";
-import imagetwo from "/electricwork.avif";
+/* import imageone from "/machinework.avif";
+import imagetwo from "/electricwork.avif"; */
 
 const WorkCards = () => {
   return (
@@ -33,7 +33,7 @@ const works = [
     service: "Machine TakeOff",
     title: "Machine Estimating for Mac Bilders",
     year: "2023",
-    image: imageone,
+    image: "/machinework.avif",
     altimage: "People discusing",
   },
   {
@@ -41,7 +41,7 @@ const works = [
     service: "Electrical TakeOff",
     title: "How we saved BVO Construction in Electical Works",
     year: "2024",
-    image: imagetwo,
+    image: "/electricwork.avif",
     altimage: "Electrical poll",
   },
   {
@@ -49,7 +49,7 @@ const works = [
     service: "Electrical TakeOff",
     title: "How we saved BVO Construction in Electical Works",
     year: "2024",
-    image: imagetwo,
+    image: "/electricwork.avif",
     altimage: "Electrical poll",
   },
   {
@@ -57,7 +57,7 @@ const works = [
     service: "Electrical TakeOff",
     title: "How we saved BVO Construction in Electical Works",
     year: "2024",
-    image: imagetwo,
+    image: "/electricwork.avif",
     altimage: "Electrical poll",
   },
 ];

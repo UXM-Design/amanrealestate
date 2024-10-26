@@ -29,7 +29,7 @@ const ReviewPage = () => {
 
 export default ReviewPage;
 
-export function ReviewSlider() {
+function ReviewSlider() {
   return (
     <>
       <div className="w-full md:h-full h-auto md:py-0 py-6 flex justify-center items-center">
@@ -95,7 +95,7 @@ interface ReviewCardProps {
   message: string;
 }
 
-export function ReviewCard({ logo, name, message, position }: ReviewCardProps) {
+function ReviewCard({ logo, name, message, position }: ReviewCardProps) {
   return (
     <>
       <div className="w-[380px] px-6 py- h-[320px] bg-white rounded-md hover:shadow-lg border flex justify-center items-center">
