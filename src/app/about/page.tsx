@@ -23,9 +23,15 @@ const page = () => {
         </div>
         <div className="second-section-about w-full min-h-screen flex flex-col gap-3 justify-center items-center">
           <div className="md:w-1/2 w-auto md:px-0 px-6">
-            <h2 className="text-[3.4rem] text-wrap leading-tight selection:text-white">
-              We’re commited to fostering and estimating better quotes that fits
-              everyone
+            <h2 className="text-[1.4rem] text-wrap leading-tight selection:text-white">
+              At Archo infra, we specialize in providing precise and reliable
+              construction estimating and design services. With years of
+              industry experience, we are committed to delivering accurate
+              project estimations and creative, functional designs that meet
+              both client needs and budget constraints. Our team is composed of
+              skilled professionals who bring a wealth of knowledge and
+              expertise to each project, ensuring that every construction
+              endeavor is set up for success from the very beginning.
             </h2>
           </div>
         </div>
