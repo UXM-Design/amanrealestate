@@ -20,13 +20,14 @@ const HeroSection = () => {
               <span className="px-6 py-3 rounded-full bg-black/40">
                 Web Elevation
               </span>
-              <h1 className="md:text-4xl text-3xl m-0 my-6 font-bold tracking-tight text-white">
-                Win more projects with <br /> right estimation
+              <h1 className="md:text-3xl text-2xl m-0 my-6 font-bold tracking-tight text-white">
+                Win more projects with accurate estimation <br /> at right time.
+                Save time and money with us.
               </h1>
               <p className="text-sm md:w-[40vw] w-full m-0 text-gray-200">
-                From project evaluation, takeoff and estimating, to construction
-                and closeout, contractors use STACK’s cloud-based software to
-                help run their businesses and maximize profits.
+                Pre-construction specialization from project design, analysis ,
+                evolution, estimation, costing to project monitoring and
+                Documentation.
               </p>
             </div>
             <div className="px-4 py-4 md:w-[450px] w-[360px] rounded-lg bg-white flex justify-center items-center">
@@ -59,28 +60,42 @@ export function ShortForm() {
             name="name"
             id="name"
             placeholder="Enter your name"
-            className="w-[320px] h-[54px] border border-gray-400 rounded-md"
+            className="w-[320px] h-[42px] border border-gray-400 rounded-md"
           />
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email"
-            className="w-[320px] h-[54px] border border-gray-400 rounded-md"
+            className="w-[320px] h-[42px] border border-gray-400 rounded-md"
+          />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Enter your ph Number"
+            className="w-[320px] h-[42px] border border-gray-400 rounded-md"
           />
           <input
             type="datetime-local"
             name="date"
             id="date"
-            placeholder="Select your date"
-            className="w-[320px] h-[54px] border border-gray-400 rounded-md"
+            placeholder="Select your date (Optional)"
+            className="w-[320px] h-[42px] border border-gray-400 rounded-md"
+          />
+          <input
+            type="text"
+            name="message"
+            id="message"
+            placeholder="Enter your Message"
+            className="w-[320px] h-[42px] border border-gray-400 rounded-md"
           />
           <input
             type="submit"
             name="button"
             id="button"
             value={"Schedule Meeting"}
-            className="w-[320px] h-[54px] border-none bg-yellow-500 text-black rounded-md"
+            className="w-[320px] h-[42px] border-none bg-yellow-500 text-black rounded-md"
           />
         </form>
       </div>

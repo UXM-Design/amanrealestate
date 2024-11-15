@@ -104,12 +104,14 @@ const Service = () => {
               Build better with our perfect estimation{" "}
             </h1>
             <p className="text-wrap whitespace-pre-wrap text-center md:w-1/2 w-auto md:px-0 px-4 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam repellendus voluptatum doloribus nostrum veniam omnis,
-              corporis odio, provident, illo vero in? Autem eveniet ipsum cum
-              laudantium voluptatem non necessitatibus earum deleniti est.
-              Molestiae quae, hic voluptates accusamus pariatur nemo
-              necessitatibus!
+              We are dedicated to maintaining the integrity of our work, helping
+              our clients make informed decisions, and bringing their
+              construction visions to life with quality, efficiency, and
+              reliability.
+            </p>
+            <p className="text-wrap whitespace-pre-wrap text-center md:w-1/2 w-auto md:px-0 px-4 text-sm">
+              Our main aim is to make the project win for our client to provide
+              their estimate without waiting for long to quotes.
             </p>
             <br />
             <div className="flex gap-10 md:flex-row flex-col justify-center items-center">
@@ -117,7 +119,7 @@ const Service = () => {
                 href="/enquiry"
                 className="px-12 py-3 bg-black  text-white rounded-md hover:shadow-lg ease-in duration-300 hover:-translate-y-3"
               >
-                Get Quote
+                Enquire
               </Link>
               <Link
                 href="/contact"

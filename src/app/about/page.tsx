@@ -34,26 +34,27 @@ const page = () => {
             className="w-full flex justify-center items-center
             "
           >
-            <div>
-              <h2 className="text-4xl font-semibold">Vision</h2>
-              <p className="text-sm md:w-1/2 w-full py-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo, amet!
+            <div className="flex flex-col justify-center items-center md:px-8">
+              <h2 className="text-4xl font-semibold text-left w-full">
+                Vision
+              </h2>
+              <br />
+              <p className="text-sm w-full  py-2">
+                Our vision is to become a leading force in the construction
+                industry by continuously innovating the way projects are
+                estimated and designed.
               </p>
-              <br />
-              <hr />
-              <br />
-              <ol className="text-sm space-y-2">
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  01. Lorem ipsum dolor sit amet consectetur.
-                </li>
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  02. Lorem ipsum dolor sit amet consectetur.
-                </li>
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  03. Lorem ipsum dolor sit amet consectetur.
-                </li>
-              </ol>
+              <p className="text-sm w-full  py-2">
+                We strive to empower our clients with the most accurate data and
+                creative designs that not only meet the functional needs of
+                their projects but also enhance the quality and sustainability
+                of their investments.
+              </p>
+              <p className="text-sm w-full  py-2">
+                We envision a future where every construction project—large or
+                small—benefits from transparent cost forecasting, cutting-edge
+                design solutions, and seamless execution.
+              </p>
             </div>
           </div>
           <div
@@ -83,24 +84,26 @@ const page = () => {
           >
             <div>
               <h2 className="text-4xl font-semibold">Mission</h2>
-              <p className="text-sm md:w-1/2 w-full py-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo, amet!
+              <p className="text-sm md:w-2/3 w-full py-2">
+                Our mission is to deliver exceptional construction estimating
+                and design services that foster trust, transparency, and value.
+                We aim to support our clients through every phase of their
+                projects by providing precise, timely, and cost-effective
+                solutions. By combining our expertise with the latest industry
+                tools and a deep understanding of each client’s unique
+                requirements, we ensure the highest level of service and
+                satisfaction.
               </p>
-              <br />
-              <hr />
-              <br />
-              <ol className="text-sm space-y-2">
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  01. Lorem ipsum dolor sit amet consectetur.
-                </li>
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  02. Lorem ipsum dolor sit amet consectetur.
-                </li>
-                <li className="py-4 px-3 border-2 border-[#ececec] bg-white hover:drop-shadow-md rounded-md">
-                  03. Lorem ipsum dolor sit amet consectetur.
-                </li>
-              </ol>
+              {/* <p className="text-sm md:w-2/3 w-full py-2">
+                We are dedicated to maintaining the integrity of our work,
+                helping our clients make informed decisions, and bringing their
+                construction visions to life with quality, efficiency, and
+                reliability.
+              </p>
+              <p className="text-sm md:w-2/3 w-full py-2">
+                Our main aim is to make the project win for our client to
+                provide their estimate without waiting for long to quotes.
+              </p> */}
             </div>
           </div>
         </div>
